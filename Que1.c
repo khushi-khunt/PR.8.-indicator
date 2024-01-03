@@ -8,18 +8,19 @@ The length of a string is: 11
 */
 void  main(){
     
-	char str[100];
-	int i,a=0;
+	char str[10];
+	int *ptr;
+	int *p;
+	int len;
 	
 	printf("Enter any string: ");
     gets(str);
     
-    char *ptr;
+   
     ptr=&str;
 
-   for(i=0;str[i]!='\0';i++){
-        a++;
-        ptr++;
-    }
-    printf("The length of the string is: %d", a);
+    len=strlen(ptr);
+    p=&len;
+
+    printf("The length of the string is: %d", *p);
 }
